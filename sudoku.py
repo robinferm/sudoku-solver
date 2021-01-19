@@ -40,16 +40,12 @@ def vertical():
     for col in range(0, len(grid2[0])):
         nums = []
         for row in grid2:
-            #print(row[col])
             if len(row[col]) == 1:
                 nums += row[col]
-        #print(nums)
 
         for i in range(len(grid2)):
-            #print(grid2[i][col])
             if len(grid2[i][col]) > 1:
                 for num in nums:
-                    #print(grid2[i][col])
                     grid2[i][col] = grid2[i][col].replace(num, '')
 
 def square():
@@ -64,17 +60,12 @@ def square():
             for j in range(x, y):
                 if len(grid2[i][j]) == 1:
                     nums += grid2[i][j]
-                #print(grid2[i][j])
-        #print(nums)
 
         for i in range(3):
             for j in range(x, y):
                 if len(grid2[i][j]) > 1:
                     for num in nums:
-                        #print(f'*** removed {num} from {grid2[i][j]}')
                         grid2[i][j] = grid2[i][j].replace(num, '')
-                #print(grid2[i][j])
-        
         
         nums = []
         # second column
@@ -82,17 +73,12 @@ def square():
             for j in range(x, y):
                 if len(grid2[i][j]) == 1:
                     nums += grid2[i][j]
-                #print(grid2[i][j])
-        #print(nums)
 
         for i in range(3, 6):
             for j in range(x, y):
                 if len(grid2[i][j]) > 1:
                     for num in nums:
-                        #print(f'*** removed {num} from {grid2[i][j]}')
                         grid2[i][j] = grid2[i][j].replace(num, '')
-                #print(grid2[i][j])
-        #print('............................')
         
         nums = []
         # third column
@@ -107,13 +93,9 @@ def square():
             for j in range(x, y):
                 if len(grid2[i][j]) > 1:
                     for num in nums:
-                        #print(f'*** removed {num} from {grid2[i][j]}')
                         grid2[i][j] = grid2[i][j].replace(num, '')
-                #print(grid2[i][j])
-        #print('............................')
         x += 3
         y += 3
-
 
 
 def solve():
@@ -129,6 +111,5 @@ def solve():
     print('##### AFTER ##########')
     for x in grid2:
         print(x)
-
 
 solve()
