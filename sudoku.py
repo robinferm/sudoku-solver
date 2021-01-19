@@ -86,8 +86,6 @@ def square():
             for j in range(x, y):
                 if len(grid2[i][j]) == 1:
                     nums += grid2[i][j]
-                #print(grid2[i][j])
-        #print(nums)
 
         for i in range(6, 9):
             for j in range(x, y):
@@ -99,17 +97,12 @@ def square():
 
 
 def solve():
-    print('##### BEFORE ##########')
-    for x in grid2:
-        print(x)
-
-    for i in range(10):
+    for _ in range(10):
         horizontal()
         vertical()
         square()
-
-    print('##### AFTER ##########')
-    for x in grid2:
-        print(x)
-
+        # print('############################################')
+        # for x in grid2:
+        #     print(x)
+    return grid2
 solve()
