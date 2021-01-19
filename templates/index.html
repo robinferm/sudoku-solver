@@ -1,0 +1,21 @@
+
+{% block main %}
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<h1>Sudoku solver</h1>
+<form action="/" id="form" method="POST">
+    <input type="text" id="input">
+    <input type="submit" value="Find" />
+</form>
+<div id="container">
+    <table>
+        <tbody id="output">
+
+        </tbody>
+
+    </table>
+</div>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+{% endblock %}
